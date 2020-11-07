@@ -1,18 +1,34 @@
 module.exports = {
   siteMetadata: {
-    description: "Personal page of John Doe",
+    showThemeLogo: true,
+    description: "Personal page of Oliver Balmford",
     locale: "en",
-    title: "John Doe",
+    title: "Oliver Balmford",
   },
   plugins: [
+ 
     {
-      resolve: "@wkocjan/gatsby-theme-intro",
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        basePath: "/",
-        contentPath: "content/",
-        showThemeLogo: true,
-        theme: "classic",
+        postCssPlugins: [
+          require("tailwindcss")(require("./tailwind.config")("dark-green")),
+          require("postcss-input-range"),
+          require("autoprefixer"),
+        ],
       },
     },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: "content/profile/",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 }
