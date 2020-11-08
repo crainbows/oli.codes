@@ -2,14 +2,15 @@
   initials: OB
   name: Dr Oliver Balmford
   email: contact@oli.codes
-  profession: Aspiring Frontend Developer
+  profession: Developer
   image: images/portrait.jpg
   location: London, UK
   relocation: false
   company: Pirum Systems
-  for_hire: true
+  for_hire: false
   focus: Building Golang APIs
-  focus_url: https://gatsbyjs.org
+  focus_url: ""
+  show_projects: false
   about: |
     Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.
 
@@ -23,8 +24,3 @@
     - VSCode
     - Linux
     - Docker
-  budget:
-    currency: £
-    min: 1
-    max: 30
-    default: 1

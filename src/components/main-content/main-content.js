@@ -22,9 +22,9 @@ const MainContent = ({ history, projects, profile }) => {
       </div>
 
       {profile.about && <About about={profile.about} />}
-      <Projects projects={projects} />
+      {profile.show_projects && <Projects projects={projects} />}
       <WorkHistory history={history} />
-      <ContactForm email={profile.email} budget={profile.budget} />
+      <ContactForm email={profile.email} />
     </main>
   )
 }

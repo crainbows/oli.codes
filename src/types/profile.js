@@ -1,14 +1,8 @@
 import { graphql } from "gatsby"
-import { arrayOf, bool, number, shape, string, object } from "prop-types"
+import { arrayOf, bool, shape, string, object } from "prop-types"
 
 export const ProfileType = {
   about: string.isRequired,
-  budget: shape({
-    currency: string.isRequired,
-    default: number.isRequired,
-    max: number.isRequired,
-    min: number.isRequired,
-  }).isRequired,
   company: string.isRequired,
   email: string.isRequired,
   focus: string.isRequired,
@@ -23,6 +17,7 @@ export const ProfileType = {
   name: string.isRequired,
   profession: string.isRequired,
   relocation: bool.isRequired,
+  show_projects: bool,
   skills: arrayOf(string).isRequired,
   tools: arrayOf(string).isRequired,
 }
@@ -30,12 +25,6 @@ export const ProfileType = {
 export const query = graphql`
   fragment ProfileFragment on ProfileYaml {
     about
-    budget {
-      currency
-      default
-      max
-      min
-    }
     company
     email
     focus
