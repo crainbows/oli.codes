@@ -2,7 +2,7 @@ import React from "react"
 import { ProfileType } from "../../types"
 import "./contact-form.css"
 
-const ContactForm = ({ email }) => {
+const ContactForm = ({ formspree_id }) => {
   return (
     <>
       <h5
@@ -13,7 +13,7 @@ const ContactForm = ({ email }) => {
       </h5>
 
       <form
-        action={`https://formspree.io/f/${email}`}
+        action={`https://formspree.io/f/${formspree_id}`}
         className="flex flex-wrap"
         method="post"
       >
@@ -74,7 +74,7 @@ const ContactForm = ({ email }) => {
 }
 
 ContactForm.propTypes = {
-  email: ProfileType.email,
+  formspree_id: ProfileType.formspree_id,
 }
 
 export default ContactForm

@@ -8,6 +8,7 @@ export const ProfileType = {
   focus: string.isRequired,
   focus_url: string,
   for_hire: bool.isRequired,
+  formspree_id: string,
   image: shape({
     childImageSharp: object.isRequired,
     publicURL: string.isRequired,
@@ -29,6 +30,7 @@ export const query = graphql`
     email
     focus
     focus_url
+    formspree_id
     for_hire
     image {
       childImageSharp {
@@ -43,6 +45,7 @@ export const query = graphql`
     name
     profession
     relocation
+    show_projects
     skills
     tools
   }
