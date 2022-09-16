@@ -8,7 +8,7 @@
   relocation: false
   company: Pirum Systems
   for_hire: false
-  focus: Building Golang APIs
+  focus: Functional Programming with fp-ts
   formspree_id: "xbjpyvqg"
   focus_url: ""
   show_projects: false
@@ -16,7 +16,7 @@
     Developer with over five years of web and software engineering experience. A self-starter, who is skilled in front-end technologies, data modelling and infrastructure.
     Avid learner with a strong ability to grasp new concepts and utilising them to achieve project objectives. Ability to work well under pressure, in a team and to short deadlines.
   skills:
-    - JavaScript
+    - TypeScriptJavaScript
     - HTML / CSS
     - PHP
   tools:
